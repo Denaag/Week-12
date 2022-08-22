@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+
+    </head>
+    <body class="container mt-3">
+        <section class="row">
+            <div class="col mb-3 text-center">
+                <h1>Hiring Database</h1>
+            </div>
+        </section>
+        <div class="row mb-3">
+            <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">First Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control form-control-md" id="first-name" placeholder="First Name">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Last Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control form-control-md" id="last-name" placeholder="Last Name">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Position</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control form-control-md" id="position-title" placeholder="Position Title">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="form-group fs-5">
+                    <label id="hire-date" for="hire date">Hire Date</label>
+                </div>
+            </div>
+            <div class="col">
+                <input type="date" class="form-control" id="hired">
+            </div>
+        </div>
+        <section>
+            <div class="row">
+                <div class="col-auto">
+                    <button id="add" type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </section>
+
+        <table id="list" class="table mt-3 table-dark table-striped">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Position</th>
+                <th>Hire Date</th>
+                <th>Terminate</th>
+            </tr>
+        </table>
+        
+  
+  
+        
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script src="newEmployee.js"></script>
+    </body>
+</html>
