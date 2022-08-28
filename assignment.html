@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Goods Inventory</title>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+        <link type="text/css" rel="stylesheet" href="assignmentStyle.css">
+        
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container">
+                <a href="#" class="navbar-brand">Home Goods Inventory</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navmenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="#inventory" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#help" class="nav-link">Help Desk</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <table class="table table-info container">
+            <tr>
+                <td>
+                    <form autocomplete="off" onsubmit="onFormSubmit()">
+                        <div class="row">
+                            <div class="col form-outline">
+                                <label for="UPC">UPC Number</label>
+                                <input type="text" name="UPC" id="UPC" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col form-outline">
+                                <label for="productName">Product Name</label>
+                                <input type="text" name="productName" id="productName" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col form-outline">
+                                <label for="qty">Qty</label>
+                                <input type="number" name="qty" id="qty" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col form-outline">
+                                <label for="perPrice">Price</label>
+                                <input type="number" name="perPrice" id="perPrice" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form_action--button">
+                                <input type="submit" value="Submit">
+                                <input type="reset" value="reset">
+                            </div>
+                        </div>
+                    </form>
+
+                    <td>
+                        <table class="list" id="storeList">
+                            <thead>
+                                <tr>
+                                    <th>UPC Number</th>
+                                    <th>Product Name</th>
+                                    <th>Qty</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </td>
+                </td>
+            </tr>
+        </table>
+
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script type="text/javascript" src="./assignment.js"></script>
+    </body>
+</html>
