@@ -1,7 +1,8 @@
 var selectedRow = null;
 
-const myInventory = [
-    {
+let myInventory = [
+    // practice array items that will push to console after you enter an inventory item
+    { 
         UPC : 001,
         productName : "Pillow",
         qty : 1,
@@ -18,23 +19,23 @@ const myInventory = [
         productName : "Lamp",
         qty : 1,
         perPrice : 55,
-    },
+    }
 ]
 
-function addData() {
-    for (let i = 0; i < myInventory.length; i++) {
-        $("#table").html(
-            //
-            $("#table").html()+
-            `
-            <td>${myInventory[i].UPC}</td>
-            <td>${myInventory[i].productName}</td>
-            <td>${myInventory[i].qty}</td>
-            <td>${myInventory[i].perPrice}</td>
-            `
-        );
-    }
-}
+// function addData() {
+//     for (let i = 0; i < myInventory.length; i++) {
+//         $("#table").html(
+//             //
+//             $("#table").html()+
+//             `
+//             <td>${myInventory[i].UPC}</td>
+//             <td>${myInventory[i].productName}</td>
+//             <td>${myInventory[i].qty}</td>
+//             <td>${myInventory[i].perPrice}</td>
+//             `
+//         );
+//     }
+// }
 
 
 function onFormSubmit(e) {
@@ -74,6 +75,16 @@ function insertNewRecord(data) { // this allows data typed to be placed in form 
         cell4.innerHTML = data.perPrice;
     var cell5 = newRow.insertCell(4);
         cell5.innerHTML = `<button onClick="onEdit(this)">Edit</button> <button onClick="onDelete(this)">Delete</button>`;
+
+    myInventory.push (
+        {
+            UPC: data.UPC,
+            productName: data.productName,
+            qty: data.qty,
+            perPrice: data.perPrice 
+        }
+    );
+    console.log(myInventory);
 }
 
 //Edit the data
