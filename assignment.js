@@ -1,5 +1,42 @@
 var selectedRow = null;
 
+const myInventory = [
+    {
+        UPC : 001,
+        productName : "Pillow",
+        qty : 1,
+        perPrice : 35,
+    },
+    {
+        UPC : 002,
+        productName : "Couch",
+        qty : 1,
+        perPrice : 1500,
+    },
+    {
+        UPC : 003,
+        productName : "Lamp",
+        qty : 1,
+        perPrice : 55,
+    },
+]
+
+function addData() {
+    for (let i = 0; i < myInventory.length; i++) {
+        $("#table").html(
+            //
+            $("#table").html()+
+            `
+            <td>${myInventory[i].UPC}</td>
+            <td>${myInventory[i].productName}</td>
+            <td>${myInventory[i].qty}</td>
+            <td>${myInventory[i].perPrice}</td>
+            `
+        );
+    }
+}
+
+
 function onFormSubmit(e) {
     event.preventDefault();
     var formData = readFormData();
@@ -74,23 +111,4 @@ function resetForm() { //reset the data after items are entered
 }
 
 
-const myInventory = [
-    {
-        UPC : 001,
-        productName : "Pillow",
-        qty : 1,
-        perPrice : 35,
-    },
-    {
-        UPC : 002,
-        productName : "Couch",
-        qty : 1,
-        perPrice : 1500,
-    },
-    {
-        UPC : 003,
-        productName : "Lamp",
-        qty : 1,
-        perPrice : 55,
-    },
-]
+
